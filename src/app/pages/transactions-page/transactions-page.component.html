@@ -1,0 +1,25 @@
+<div class="transactions-page">
+  <div class="transactions-page__top">
+    <div class="transactions-page__balance">
+      <app-balance></app-balance>
+    </div>
+
+    <div class="transactions-page__form-wrapper">
+      <app-transaction-form></app-transaction-form>
+    </div>
+  </div>
+
+  <div class="transactions-page__content">
+    @if(transactionsList().length) {
+    <div class="transactions-page__filters">
+      <app-transactions-filters></app-transactions-filters>
+    </div>
+
+    <div class="transactions-page__filters">
+      <app-transactions-table
+        [transactions]="transactionsList()"
+      ></app-transactions-table>
+    </div>
+    }
+  </div>
+</div>

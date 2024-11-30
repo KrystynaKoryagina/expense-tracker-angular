@@ -1,0 +1,59 @@
+<mat-card class="card">
+  <div class="card__title">Create new transaction</div>
+  <p class="card__subtitle">
+    Enter required fields to save a new expense or add new income
+  </p>
+
+  <form class="form" [formGroup]="transactionForm">
+    <div class="form__row">
+      <div class="form__item">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Name" required formControlName="name" />
+
+          @if (transactionForm.get('name')?.hasError('required')) {
+          <mat-error>Name is required</mat-error>
+          }
+        </mat-form-field>
+      </div>
+
+      <div class="form__item">
+        <mat-form-field>
+          <mat-label>Amount</mat-label>
+          <input matInput required formControlName="amount" appOnlyNumbers />
+
+          @if (transactionForm.get('amount')?.hasError('required')) {
+          <mat-error>Amount is required</mat-error>
+          } @if (transactionForm.get('amount')?.hasError('pattern')) {
+          <mat-error>
+            Amount must be a valid number with two decimal places
+          </mat-error>
+          }
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="form__row">
+      <div class="form__item">
+        <app-transaction-type formControlName="type"></app-transaction-type>
+      </div>
+
+      <div class="form__item">
+        <app-transaction-category
+          formControlName="category"
+        ></app-transaction-category>
+      </div>
+    </div>
+
+    <div class="form__row">
+      <app-datepicker formControlName="date"></app-datepicker>
+    </div>
+  </form>
+
+  <div class="btn-group">
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-flat-button (click)="onSave()" [disabled]="isFormInvalid">
+      Save
+    </button>
+  </div>
+</mat-card>

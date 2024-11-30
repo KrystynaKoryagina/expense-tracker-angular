@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Category</mat-label>
+  <mat-select [(value)]="value" (selectionChange)="onChange($event.value)">
+    @for (category of categories; track category.value) {
+    <mat-option [value]="category.value">{{ category.label }}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>

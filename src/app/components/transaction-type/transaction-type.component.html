@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Transaction Type</mat-label>
+  <mat-select [(value)]="value" (selectionChange)="onChange($event.value)">
+    @for (type of types; track type.value) {
+    <mat-option [value]="type.value">{{ type.label }}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>

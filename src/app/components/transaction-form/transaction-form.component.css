@@ -1,0 +1,39 @@
+:host {
+  display: block;
+  max-width: 800px;
+  width: 100%;
+}
+
+.card {
+  padding: 15px;
+}
+
+.card__title {
+  font-size: 24px;
+}
+
+.card__subtitle {
+  font-size: 14px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form__item {
+  width: 50%;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

@@ -1,0 +1,28 @@
+.transactions-page {
+  padding: 20px;
+}
+
+.transactions-page__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.transactions-page__balance {
+  flex-shrink: 0;
+}
+
+.transactions-page__form-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.transactions-page__content {
+  margin-top: 30px;
+}
+
+.transactions-page__filters {
+  margin-bottom: 20px;
+}

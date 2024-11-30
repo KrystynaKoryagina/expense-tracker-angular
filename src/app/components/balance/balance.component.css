@@ -1,0 +1,15 @@
+.balance {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.balance__title {
+  font-size: 34px;
+  text-transform: uppercase;
+}
+
+.balance__value {
+  font-weight: 900;
+  font-size: 56px;
+}

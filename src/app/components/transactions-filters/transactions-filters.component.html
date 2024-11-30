@@ -1,0 +1,20 @@
+<div class="filter">
+  @for (key of filterKey; track key) {
+  <div class="filter__row">
+    <div class="filter__title">{{ key | titlecase }}:</div>
+
+    <mat-chip-listbox>
+      @for (option of filterOptions[key]; track option) {
+      <mat-chip
+        (click)="filter({ key, value: option })"
+        class="chip"
+        [class.chip--selected]="isSelected(key, option)"
+      >
+        {{ option }}
+      </mat-chip>
+      }
+    </mat-chip-listbox>
+  </div>
+
+  }
+</div>
