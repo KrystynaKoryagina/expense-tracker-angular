@@ -62,4 +62,4 @@ For more information on using the Angular CLI, including detailed command refere
 
 Deployed via [Netlify](https://netlify.com)
 
-[Expense Tracker chat](https://krystyna-koriahina-expense-tracker.netlify.app/)
+[Expense Tracker app](https://krystyna-koriahina-expense-tracker.netlify.app/)
